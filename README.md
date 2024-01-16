@@ -1,5 +1,7 @@
 # yoheiguild
 
+![yo-hey-guild](https://github.com/flutteruniv/yoheiguild/assets/38717219/7e30fac0-3d76-4e9f-893e-11ac603891bd)
+
 共同開発15 Yo-Hey-Guild の docs などの資料置き場です。他PRを支援します。
 プロジェクト名について、 Yo-Hey-Guild: 傭兵ギルド と読みます。開発者を傭兵、Slack チャンネルをギルドと見立てています。
 
@@ -33,6 +35,9 @@ Slack に投稿された依頼を見て、対応したい内容があればス�
 複数人での協力クエストも可能ですが、依頼主の了承を得て下さい。また、誰か一人がメインの対応者となって、お見合い状態になることを避けて下さい。
 
 ### 名声の獲得
+
+![yo-hey-famed](https://github.com/flutteruniv/yoheiguild/assets/38717219/4a710e1f-370d-48e4-a421-8c075da68bf6)
+
 
 依頼を対応したら、ぜひ記事にして下さい。
 対応内容を記事にすることで、名声を獲得することができます。
