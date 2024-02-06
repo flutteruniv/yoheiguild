@@ -1,0 +1,81 @@
+name: 依頼テンプレート
+description: 依頼を作成する際のテンプレートです。
+title: "【キャッチーなワード】依頼タイトル" 
+labels: ["Quest"]
+projects: []
+assignees:
+  - 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        依頼の投稿ありがとうございます！以下のフォームに必要事項を記入してください。
+        注意点として、対応をお約束するわけではないです。
+        Expire を過ぎた場合や、定期的な棚卸し時に依頼が無効になる場合があります。
+  - type: textarea
+    id: about-requester
+    attributes:
+      label: 依頼主について
+      description: 個人開発・共同開発・企業・団体など、依頼主について記載してください。
+      placeholder: |
+        共同開発xxリーダーのyyyです。これはaaaというプロジェクトです。
+        参考 → https://bbb。
+    validations:
+      required: true
+  - type: textarea
+    id: about-request
+    attributes:
+      label: 依頼内容
+      description: 依頼内容を記載してください。十分に他タスクと切り分けた状態が望ましいです。リンクを貼る場合は、誰でも閲覧可能にするか、リンク内容がわかるように引用もつけてください。
+      placeholder: ex. xxxアプリの以下のタスクを調査して、可能ならPRまで出して欲しいです。改善案までだけでも大変ありがたいです! user/repo#123
+    validations:
+      required: true
+  - type: textarea
+    id: about-assign
+    attributes:
+      label: その他、注意点や要望・補足など
+      description: 何かあれば記載してください。
+      placeholder: ex. アサイン中は定例に参加して欲しい、進捗をSlackで共有して欲しい。
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        詳細設定を行いたい場合は、以下の項目を編集できます。
+  - type: input
+    id: expire
+    attributes:
+      label: Expire(一定期間を指定)
+      description: この日を過ぎても完了していない場合は、依頼は無効となります。
+      placeholder: 依頼日から1ヶ月。
+      value:  "依頼日から1ヶ月。"
+    validations:
+      required: true
+  - type: input
+    id: reward
+    attributes:
+      label: 報酬(option)
+      description: 基本的にはないですが、ある場合は記載してください。
+      placeholder: ex. 500FUT / いっぱい感謝します👍
+    validations:
+      required: false
+  - type: dropdown
+    id: article-mention
+    attributes:
+      label: 対応内容を記事などで公開しても良いか
+      options:
+        - はい
+        - いいえ
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: project-mention
+    attributes:
+      label: 記事でプロジェクトについて言及しても良いか
+      options:
+        - はい
+        - いいえ
+      default: 0
+    validations:
+      required: true
