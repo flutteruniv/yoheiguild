@@ -1,0 +1,79 @@
+name: 依頼テンプレート
+description: 依頼を作成する際のテンプレートです。
+title: "【 初 | 中 | 上 級クエスト】 依頼タイトルを入力せよ！"
+labels: ["Quest"]
+projects: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        依頼の投稿ありがとうございます！
+        以下のフォームに必要事項を記入してください。
+        注意点として、対応をお約束するわけではないです。
+        Expire を過ぎた場合や、定期的な棚卸し時に依頼が無効になる場合があります。
+  - type: textarea
+    id: contact
+    attributes:
+      label: 依頼主について
+      description: 個人開発・共同開発・企業・団体など、依頼主について記載してください。
+      placeholder: 共同開発xxリーダーのyyyです。これはaaaというプロジェクトです。参考 → bbb。
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 依頼内容
+      description: 依頼内容を記載してください。十分に他タスクと切り分けた状態が望ましいです。リンクを貼る場合は、誰でも閲覧可能にするか、リンク内容がわかるように引用もつけてください。
+      placeholder: ex. xxxアプリの以下のタスクを調査して、可能ならPRまで出して欲しいです。改善案までだけでも大変ありがたいです! user/repo#123
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: その他、注意点や要望・補足など
+      placeholder: ex. アサイン中は定例に参加して欲しい、進捗をSlackで共有して欲しい。
+      value: "特になし"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        詳細設定を行いたい場合は、以下の項目を記入してください。
+  - type: input
+    id: expire
+    attributes:
+      label: Expire(一定期間を指定)
+      description: この日を過ぎても完了していない場合は、依頼は無効となります。
+      placeholder: 依頼日から1ヶ月。
+      value:  "依頼日から1ヶ月。"
+    validations:
+      required: false
+  - type: input
+    id: reward
+    attributes:
+      label: 報酬(option)
+      description: 基本的にはないですが、ある場合は記載してください。
+      placeholder: ex. 500FUT / 秘伝のコード共有します！(社外秘とかはダメよ) / いっぱい感謝します👍
+      value:  "なし"
+    validations:
+      required: false
+  - type: dropdown
+    id: article-publish
+    attributes:
+      label: 対応内容を記事などで公開しても良いか(はい\|いいえ)
+      options:
+        - はい
+        - いいえ
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: article-publish-project
+    attributes:
+      label: 記事でプロジェクトについて言及しても良いか(はい\|いいえ)
+      options:
+        - はい
+        - いいえ
+      default: 0
+    validations:
+      required: true
